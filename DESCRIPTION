@@ -1,0 +1,15 @@
+Package: actordupes
+Title: Find Duplicated Entities in Actor Dataframes
+Version: 1.0.0.0000
+Authors@R: 
+    person("Tabea", "Lüders", , "tabea.lueders@kit.edu", role = "cre")
+Description: This package contains three functions that are needed to identify duplicates in NER 	dataframes by the similarity of their last name.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Imports: 
+    dplyr,
+    purrr,
+    stringr,
+    tidyr
