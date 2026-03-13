@@ -2,4 +2,5 @@
 
 export(common_string)
 export(find_duplicates)
+export(mark_relevant_actors)
 export(prepare_duplicate_dataframe)

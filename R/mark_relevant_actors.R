@@ -1,3 +1,23 @@
+#' Mark relevant actors
+#'
+#' @param dataframe A dataframe with identified duplicates.
+#' @param prepared_duplicate_data A prepared form of the dataframe after using the function "prepare_duplicate_dataframe".
+#' @param min_similarity A numeric specifying the similarity threshold for two strings to be identified as duplicate.
+#'
+#' @returns Changes the values of the column "relevant" in the initial dataframe to distinguish relevant actors from irrelevant actors and duplicates.
+#' @export
+#'
+#' @examples
+#' entity_id <- c(1:4)
+#' entity <- c("Philipp Müller", "Miley Cyrus", "Cyrus", "Wagner")
+#' document_id <- c(1, 1, 1, 1)
+#' relevant <- c(TRUE, TRUE, TRUE, FALSE)
+#' duplicate <- c(NA, NA, TRUE, NA)
+#' actors_in_document_1 <- data.frame(entity_id, entity, document_id, relevant, duplicate)
+#'
+#' prepared_dataframe_actors_in_document_1 <- prepare_duplicate_dataframe(actors_in_document_1)
+#'
+#' relevant_actors_in_document_1 <- mark_relevant_actors(actors_in_document_1, prepared_dataframe_actors_in_document_1, 0.8)
 mark_relevant_actors <- function(dataframe, prepared_duplicate_data, min_similarity) {
   data <- dataframe |> 
     dplyr::left_join(prepared_duplicate_data |>
