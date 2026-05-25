@@ -52,8 +52,8 @@ relevant (relevant).
     #> 5         5 Richard Wagner           1     TRUE
 
 To receive a clean version of the actor dataset with a correct
-indication of active, thus relevant actors, you have to follow these xx
-steps shown in this code example:
+indication of active, thus relevant actors, you have to follow these
+four steps shown in this code example:
 
 ### 1. Load the package
 
@@ -129,8 +129,8 @@ actors_dataframe
 #> 1         1 Philipp Müller           1 TRUE     NA       
 #> 2         2 Miley Cyrus              1 TRUE     NA       
 #> 3         3 Cyrus                    1 FALSE    TRUE     
-#> 4         4 Wagner                   1 FALSE    NA       
-#> 5         5 Richard Wagner           1 TRUE     TRUE
+#> 4         4 Wagner                   1 TRUE     NA       
+#> 5         5 Richard Wagner           1 FALSE    TRUE
 ```
 
 Note that the value in relevant for “3 = Cyrus” has been changed while

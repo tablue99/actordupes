@@ -45,7 +45,7 @@ actors_dataframe <- data.frame(entity_id, entity, document_id, relevant)
 actors_dataframe
 ```
 
-To receive a clean version of the actor dataset with a correct indication of active, thus relevant actors, you have to follow these xx steps shown in this code example:
+To receive a clean version of the actor dataset with a correct indication of active, thus relevant actors, you have to follow these four steps shown in this code example:
 
 ### 1. Load the package
 ```{r step 1}
