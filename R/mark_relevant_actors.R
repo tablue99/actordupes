@@ -43,7 +43,7 @@ mark_relevant_actors <- function(dataframe, prepared_duplicate_data, min_similar
     dplyr::left_join(prepared_duplicate_data |> 
                        dplyr::select(entity_id, last_name), by = "entity_id") |> 
     dplyr::mutate(stem_name = SnowballC::wordStem(last_name, language = "german")) |>
-    dplyr::group_by(stem_name) |> 
+    dplyr::group_by(stem_name, document_id) |> 
     dplyr::mutate(any_rel = any(relevant == TRUE)) |> 
     dplyr::ungroup() |> 
     dplyr::mutate(relevant = dplyr::case_when(!is.na(first_mention) & relevant == FALSE & any_rel == TRUE ~ TRUE,
